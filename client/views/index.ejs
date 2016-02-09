@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="JoshifyApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+    <script src="/js/controllers/notices_controller.js" charset="utf-8"></script>
+    <title>You notice, son.</title>
+  </head>
+  <body>
+
+    <h1>Notice me</h1>
+
+
+    <section ng-controller = "NoticeController">
+<div class="col-md-12">
+      <form ng-submit="newNotice()">
+        <input type="text" placeholder="username" ng-model="newNotice.username">
+        <input type="text" placeholder="I'm totally noticing this?" ng-model="newNotice.notice_type">
+        <select placeholder="how was it?"ng-model="newNotice.quality">
+          <option value="1"  >It was terrible.</option>
+          <option value="2">Mediocre.</option>
+          <option value="3" selected>Average.</option>
+          <option value="4">Good.</option>
+          <option value="5">Fantastic!</option>
+        </select>
+        <input type="textarea" placeholder="tell us more" ng-model="newNotice.review">
+        <input type="text" placeholder="url for image" ng-model="newNotice.img_url">
+        <input type="submit">
+      </form>
+      </div>
+<div class="row">
+      <div ng-repeat = "notice in notices" class="result">
+        <div class="col-md-8 card">
+          <h2>{{ notice.username }}</h2>
+          <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
+          <h4>{{ notice.notice_type }}</h4>
+          <p> {{ notice.review}} stars!</p>
+          <h4> {{notice.rating}} </h4>
+
+          <button type="button" ng-click="removeNotice(notice._id)">Remove Review</button>
+      </div>
+      </div>
+      </div>
+
+    </section>
+  </body>
+</html>
