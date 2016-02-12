@@ -6,8 +6,7 @@ var express     = require('express'),
     socketIo    = require('socket.io'),
     io          = socketIo(server);
 
-
-mongoose.connect('mongodb://localhost/notice-01')
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/notice-01')
 app.use(express.static('./client'));
 
 app.set('views', __dirname + '/client/views')
