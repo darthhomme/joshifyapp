@@ -6,7 +6,9 @@ var express     = require('express'),
     socketIo    = require('socket.io'),
     io          = socketIo(server);
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/notice-01')
+var mongoPath = process.env.MONGOLAB_URI || 'mongodb://localhost/notice-01';
+// mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/notice-01')
+mongoose.connect(mongoPath);
 app.use(express.static('./client'));
 
 app.set('views', __dirname + '/client/views')
@@ -28,7 +30,7 @@ app.use('/api/notices', noticeRouter);
   });
 });
 
-var port = 8080;
+var port = process.env.PORT || 8080;
 app.listen(port, function(){
   console.log("listening on port ", port);
 })
