@@ -6,6 +6,6 @@ Express and Node allows for exportation of modules and for the viewing of applic
 
 My MEAN application allows the user to add notices for reminders he can later come back to.
 
-The app itself is divided into two portions: The client side and the server side. In the latter, I made a backend API to which I'll be posting notices.
+The app itself is divided into two portions: The client side and the server side. In the latter, I made a backend API, <a href="https://whispering-tundra-71237.herokuapp.com/api/notices">/api/notices</a> to which I'll be posting notices data. On the front end goes my controller, angular module, and CSS
 
 Here is the <a href="https://whispering-tundra-71237.herokuapp.com/">awesome link</a> to my app.
