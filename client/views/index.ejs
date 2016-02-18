@@ -24,7 +24,7 @@
 
 
     <section ng-controller = "NoticeController">
-<div class="col-md-4">
+<div class="hi">
       <form ng-submit="newNotice()">
         <input type="text" placeholder="username" ng-model="newNotice.username">
         <input type="text" placeholder="I'm totally noticing this?" ng-model="newNotice.notice_type">
@@ -42,7 +42,7 @@
       </div>
 <div class="row">
       <div ng-repeat = "notice in notices" class="result">
-        <div class="col-md-8 card">
+        <div class="col-md-4">
           <h2>{{ notice.username }}</h2>
           <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
           <h4>{{ notice.notice_type }}</h4>
