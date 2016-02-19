@@ -43,8 +43,8 @@
 <div class="row">
       <div ng-repeat = "notice in notices" class="result">
         <div class="col-md-4">
-          <h2>{{ notice.username }}</h2>
           <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
+          <h2>{{ notice.username }}</h2>
           <h4>{{ notice.notice_type }}</h4>
           <p> {{ notice.quality}} stars!</p>
           <p> {{ notice.review }} </p>
