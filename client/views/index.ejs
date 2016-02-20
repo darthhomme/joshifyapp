@@ -12,6 +12,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="/js/app.js" charset="utf-8"></script>
@@ -23,8 +24,8 @@
     <h1>Notify me</h1>
 
 
-    <section ng-controller = "NoticeController">
-<div class="hi">
+  <section ng-controller = "NoticeController">
+    <div class="hi">
       <form ng-submit="newNotice()">
         <input type="text" placeholder="username" ng-model="newNotice.username">
         <input type="text" placeholder="I'm totally noticing this?" ng-model="newNotice.notice_type">
@@ -39,8 +40,8 @@
         <input type="text" placeholder="url for image" ng-model="newNotice.img_url">
         <input type="submit">
       </form>
-      </div>
-<div class="row">
+    </div>
+    <div class="row">
       <div ng-repeat = "notice in notices" class="result">
         <div class="col-md-4">
           <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
