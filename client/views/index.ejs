@@ -23,7 +23,7 @@
     <div class="hi">
       <form ng-submit="newNotice()">
         <input type="text" placeholder="username" ng-model="newNotice.username">
-        <input type="text" placeholder="I'm totally noticing this?" ng-model="newNotice.notice_type">
+        <input type="text" placeholder="Favorite Soup" ng-model="newNotice.notice_type">
         <select placeholder="how was it?"ng-model="newNotice.quality">
           <option value="1"  >It was terrible.</option>
           <option value="2">Mediocre.</option>
@@ -31,7 +31,7 @@
           <option value="4">Good.</option>
           <option value="5">Fantastic!</option>
         </select>
-        <input type="textarea" placeholder="tell us more" ng-model="newNotice.review">
+        <input type="textarea" placeholder="Tell Us More" ng-model="newNotice.review">
         <input type="text" placeholder="url for image" ng-model="newNotice.img_url">
         <input type="submit">
       </form>
