@@ -1,7 +1,7 @@
 var ctrl = angular.module('JoshifyApp',[]);
 ctrl.controller('NoticeController', ['$scope', '$http', function($scope,$http){
 
-  $scope.newNotice = {};
+  $scope.newNotice = null;
 
   $scope.newNotice = function(){
     var noticesDB = {};
