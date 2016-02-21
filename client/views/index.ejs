@@ -18,35 +18,33 @@
 
   <h1>Notify me</h1>
 
-  <section ng-controller = "NoticeController">
-    <div class="hi">
-      <form ng-submit="newNotice()">
-        <input type="text" placeholder="username" ng-model="newNotice.username">
-        <input type="text" placeholder="Favorite Soup" ng-model="newNotice.notice_type">
-        <select placeholder="how was it?"ng-model="newNotice.quality">
-          <option value="1"  >It was terrible.</option>
-          <option value="2">Mediocre.</option>
-          <option value="3">Average.</option>
-          <option value="4">Good.</option>
-          <option value="5">Fantastic!</option>
-        </select>
+  <section class="hi" ng-controller = "NoticeController">
+    <form ng-submit="newNotice()">
+      <input type="text" placeholder="username" ng-model="newNotice.username">
+      <input type="text" placeholder="Favorite Soup" ng-model="newNotice.notice_type">
+      <select placeholder="how was it?"ng-model="newNotice.quality">
+        <option value="1"  >It was terrible.</option>
+        <option value="2">Mediocre.</option>
+        <option value="3">Average.</option>
+        <option value="4">Good.</option>
+        <option value="5">Fantastic!</option>
+      </select>
         <input type="textarea" placeholder="Tell Us More" ng-model="newNotice.review">
         <input type="text" placeholder="url for image" ng-model="newNotice.img_url">
         <input type="submit">
-      </form>
-    </div>
-    <div class="row">
-      <div ng-repeat = "notice in notices" class="col-md-3">
-        <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
-        <h2>{{ notice.username }}</h2>
-        <h4>{{ notice.notice_type }}</h4>
-        <p> {{ notice.quality}} stars!</p>
-        <p> {{ notice.review }} </p>
-        <h4> {{ notice.rating }} </h4>
+    </form>
+  <div class="row">
+    <div ng-repeat = "notice in notices" class="col-md-3">
+      <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
+      <h2>{{ notice.username }}</h2>
+      <h4>{{ notice.notice_type }}</h4>
+      <p> {{ notice.quality}} stars!</p>
+      <p> {{ notice.review }} </p>
+      <h4> {{ notice.rating }} </h4>
 
-        <button type="button" ng-click="removeNotice(notice._id)">Remove Review</button>
-      </div>
+      <button type="button" ng-click="removeNotice(notice._id)">Remove Review</button>
     </div>
+  </div>
 
   </section>
 </body>
