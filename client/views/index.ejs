@@ -36,8 +36,8 @@
         <input type="submit">
       </form>
     </div>
-    <div class="rown">
-      <div ng-repeat = "notice in notices" class="col-mdi-3">
+    <div class="row">
+      <div ng-repeat = "notice in notices" class="col-md-3">
           <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
           <h2>{{ notice.username }}</h2>
           <h4>{{ notice.notice_type }}</h4>
