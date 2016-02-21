@@ -14,10 +14,9 @@
     <script src="/js/controllers/notices_controller.js" charset="utf-8"></script>
     <title>JOSHIFY</title>
   </head>
-  <body class="container">
+<body class="container">
 
-    <h1>Notify me</h1>
-
+  <h1>Notify me</h1>
 
   <section ng-controller = "NoticeController">
     <div class="hi">
@@ -38,17 +37,17 @@
     </div>
     <div class="row">
       <div ng-repeat = "notice in notices" class="col-md-3">
-          <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
-          <h2>{{ notice.username }}</h2>
-          <h4>{{ notice.notice_type }}</h4>
-          <p> {{ notice.quality}} stars!</p>
-          <p> {{ notice.review }} </p>
-          <h4> {{ notice.rating }} </h4>
+        <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
+        <h2>{{ notice.username }}</h2>
+        <h4>{{ notice.notice_type }}</h4>
+        <p> {{ notice.quality}} stars!</p>
+        <p> {{ notice.review }} </p>
+        <h4> {{ notice.rating }} </h4>
 
-          <button type="button" ng-click="removeNotice(notice._id)">Remove Review</button>
+        <button type="button" ng-click="removeNotice(notice._id)">Remove Review</button>
       </div>
-      </div>
+    </div>
 
-    </section>
-  </body>
+  </section>
+</body>
 </html>
