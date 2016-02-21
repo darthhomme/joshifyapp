@@ -35,7 +35,7 @@
     </form>
   <div class="row">
     <div ng-repeat = "notice in notices" class="col-md-3">
-      <img ng-src="{{ notice.img_url }}" alt="No Image Here!" />
+      <img ng-src="{{ notice.img_url }}" alt="No Image Here!" class="images" />
       <h2>{{ notice.username }}</h2>
       <h4>{{ notice.notice_type }}</h4>
       <p> {{ notice.quality}} stars!</p>

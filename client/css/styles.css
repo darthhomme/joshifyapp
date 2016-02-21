@@ -11,3 +11,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.images{
+  max-width: 50px;
+}
