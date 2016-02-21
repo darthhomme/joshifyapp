@@ -16,6 +16,7 @@ ctrl.controller('NoticeController', ['$scope', '$http', function($scope,$http){
           console.log(noticesDB);
       $http.post('/api/notices', noticesDB);
       $scope.allNotices();
+      $scope.newNotice = null;
       //socket event
   };
 
